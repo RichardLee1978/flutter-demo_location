@@ -96,7 +96,7 @@ class _MyHomePageState extends State<MyHomePage> {
               _text,
               style: TextStyle(
                 color: Color.fromARGB(255, 255, 150, 150),
-                fontSize: 20.0,
+                fontSize: 18.0,
               ),
             ),
             Text('请点击 按钮!!!',
