@@ -95,13 +95,13 @@ class _MyHomePageState extends State<MyHomePage> {
             Text(
               _text,
               style: TextStyle(
-                color: Color.fromARGB(255, 255, 150, 150),
-                fontSize: 18.0,
+                color: Color.fromARGB(255, 250, 231, 231),
+                fontSize: 19.0,
               ),
             ),
             Text('请点击 按钮!!!',
                 style: TextStyle(
-                  color: Colors.blueGrey,
+                  color: Color.fromARGB(255, 210, 228, 237),
                   fontSize: 25.0,
                 )),
             FloatingActionButton(
