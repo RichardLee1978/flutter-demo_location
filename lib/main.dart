@@ -92,23 +92,60 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
-              _text,
-              style: TextStyle(
-                color: Color.fromARGB(255, 250, 231, 231),
-                fontSize: 19.0,
-              ),
-            ),
-            Text('请点击 按钮!!!',
-                style: TextStyle(
-                  color: Color.fromARGB(255, 210, 228, 237),
-                  fontSize: 25.0,
-                )),
-            FloatingActionButton(
-              onPressed: _incrementCounter,
-              tooltip: 'Increment',
-              child: const Icon(Icons.add_alert),
-            )
+            Expanded(
+                child: ListView(
+              scrollDirection: Axis.vertical,
+              shrinkWrap: true,
+              children: <Widget>[
+                new Container(
+                  width: 180.0,
+                  height: 60.0,
+                  color: Colors.lightBlue,
+                  alignment: Alignment.center,
+                  child: Text(
+                    _text,
+                    style: TextStyle(
+                      color: Color.fromARGB(255, 250, 231, 231),
+                      fontSize: 19.0,
+                    ),
+                  ),
+                ),
+                new Container(
+                  width: 180.0,
+                  height: 60.0,
+                  color: Colors.amber,
+                  alignment: Alignment.center,
+                  child: Text('请点击 按钮!!!',
+                      style: TextStyle(
+                        color: Color.fromARGB(255, 210, 228, 237),
+                        fontSize: 25.0,
+                      )),
+                ),
+                new Container(
+                  width: 180.0,
+                  height: 60.0,
+                  color: Colors.deepOrange,
+                  alignment: Alignment.center,
+                  child: new Image.network(
+                    'https://iknow-pic.cdn.bcebos.com/8c1001e93901213f8d6a4d4d46e736d12e2e95c1?x-bce-process=image%2Fresize%2Cm_lfit%2Cw_600%2Ch_800%2Climit_1%2Fquality%2Cq_85%2Fformat%2Cf_auto',
+                    color: Color.fromARGB(255, 245, 172, 210),
+                    colorBlendMode: BlendMode.darken,
+                    repeat: ImageRepeat.repeatX,
+                    fit: BoxFit.fitWidth,
+                  ),
+                ),
+                new Container(
+                    width: 180.0,
+                    height: 60.0,
+                    color: Colors.deepPurpleAccent,
+                    alignment: Alignment.center,
+                    child: FloatingActionButton(
+                      onPressed: _incrementCounter,
+                      tooltip: 'Increment',
+                      child: const Icon(Icons.add_alert),
+                    )),
+              ],
+            )),
           ],
         ),
       )),
