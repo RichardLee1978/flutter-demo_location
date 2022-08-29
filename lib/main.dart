@@ -81,74 +81,69 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title, textAlign: TextAlign.center),
         centerTitle: true,
       ),
-      body: Center(
-          // Center is a layout widget. It takes a single child and positions it
-          // in the middle of the parent.
-          child: Container(
-        alignment: Alignment.topCenter,
-        decoration: BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage("assets/bd.jpg"), fit: BoxFit.cover)),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+      body: Container(
+        // Center is a layout widget. It takes a single child and positions it
+        // in the middle of the parent.
+        margin: const EdgeInsets.all(2.0),
+        alignment: Alignment.center,
+        child: GridView(
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 4,
+              mainAxisSpacing: 2.0,
+              crossAxisSpacing: 2.0,
+              childAspectRatio: 0.7),
           children: <Widget>[
-            Expanded(
-                child: ListView(
-              scrollDirection: Axis.vertical,
-              shrinkWrap: true,
-              children: <Widget>[
-                new Container(
-                  width: 180.0,
-                  height: 60.0,
-                  color: Colors.lightBlue,
-                  alignment: Alignment.center,
-                  child: Text(
-                    _text,
-                    style: TextStyle(
-                      color: Color.fromARGB(255, 250, 231, 231),
-                      fontSize: 19.0,
-                    ),
-                  ),
+            new Container(
+              color: Colors.lightBlue,
+              alignment: Alignment.center,
+              child: Text(
+                _text,
+                style: TextStyle(
+                  color: Color.fromARGB(255, 250, 231, 231),
+                  fontSize: 16.0,
                 ),
-                new Container(
-                  width: 180.0,
-                  height: 60.0,
-                  color: Colors.amber,
-                  alignment: Alignment.center,
-                  child: Text('请点击 按钮!!!',
-                      style: TextStyle(
-                        color: Color.fromARGB(255, 210, 228, 237),
-                        fontSize: 25.0,
-                      )),
-                ),
-                new Container(
-                  width: 180.0,
-                  height: 60.0,
-                  color: Colors.deepOrange,
-                  alignment: Alignment.center,
-                  child: new Image.network(
-                    'https://iknow-pic.cdn.bcebos.com/8c1001e93901213f8d6a4d4d46e736d12e2e95c1?x-bce-process=image%2Fresize%2Cm_lfit%2Cw_600%2Ch_800%2Climit_1%2Fquality%2Cq_85%2Fformat%2Cf_auto',
-                    color: Color.fromARGB(255, 245, 172, 210),
-                    colorBlendMode: BlendMode.darken,
-                    repeat: ImageRepeat.repeatX,
-                    fit: BoxFit.fitWidth,
-                  ),
-                ),
-                new Container(
-                    width: 180.0,
-                    height: 60.0,
-                    color: Colors.deepPurpleAccent,
-                    alignment: Alignment.center,
-                    child: FloatingActionButton(
-                      onPressed: _incrementCounter,
-                      tooltip: 'Increment',
-                      child: const Icon(Icons.add_alert),
-                    )),
-              ],
+              ),
+            ),
+            new Container(
+                color: Colors.deepPurpleAccent,
+                alignment: Alignment.center,
+                child: FloatingActionButton(
+                  onPressed: _incrementCounter,
+                  tooltip: 'Increment',
+                  child: const Icon(Icons.add_alert),
+                )),
+            new Container(
+                child: new Image.network(
+              'http://img5.mtime.cn/mt/2022/08/24/100448.14169576_1280X720X2.jpg',
+              fit: BoxFit.cover,
             )),
+            new Container(
+              child: new Image.network(
+                'https://iknow-pic.cdn.bcebos.com/8c1001e93901213f8d6a4d4d46e736d12e2e95c1?x-bce-process=image%2Fresize%2Cm_lfit%2Cw_600%2Ch_800%2Climit_1%2Fquality%2Cq_85%2Fformat%2Cf_auto',
+                fit: BoxFit.cover,
+              ),
+            ),
+            new Container(
+              child: new Image.network(
+                'http://img5.mtime.cn/mt/2022/07/23/131612.22763517_1280X720X2.jpg',
+                fit: BoxFit.cover,
+              ),
+            ),
+            new Container(
+              child: new Image.network(
+                'http://img5.mtime.cn/mt/2022/07/25/124605.11163764_1280X720X2.jpg',
+                fit: BoxFit.cover,
+              ),
+            ),
+            new Container(
+              child: new Image.network(
+                'http://img5.mtime.cn/mt/2022/08/08/165700.18865463_1280X720X2.jpg',
+                fit: BoxFit.cover,
+              ),
+            ),
           ],
         ),
-      )),
+      ),
     );
   }
 }
